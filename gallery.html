@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال | عبدالله عوض بن غديد</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>عبدالله عوض بن غديد</h1>
+                <p>مصور فوتوغرافي محترف</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="gallery.html" class="active">معرض الأعمال</a></li>
+                <li><a href="about.html">عن المصور</a></li>
+                <li><a href="contact.html">التواصل</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- معرض الصور الرئيسي -->
+    <section class="full-gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الأعمال</h2>
+            
+            <!-- أزرار التصنيف -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="nature">تصوير طبيعة</button>
+                <button class="filter-btn" data-filter="portrait">تصوير شخصي</button>
+                <button class="filter-btn" data-filter="architecture">تصوير معماري</button>
+                <button class="filter-btn" data-filter="events">تصوير مناسبات</button>
+            </div>
+            
+            <!-- شبكة الصور -->
+            <div class="gallery-grid">
+                <!-- سيتم إضافة الصور ديناميكيًا -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>عبدالله عوض بن غديد</h3>
+                    <p>مصور فوتوغرافي محترف بأكثر من 10 سنوات خبرة</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                </div>
+            </div>
+            <p class="copyright">© 2024 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التواصل | عبدالله عوض بن غديد</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* تنسيقات إضافية */
+        .contact-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px auto;
+        }
+        
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-right: 4px solid #3498db;
+        }
+        
+        .contact-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-card h3 i {
+            color: #3498db;
+        }
+        
+        .contact-form-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>عبدالله عوض بن غديد</h1>
+                <p>مصور فوتوغرافي محترف</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="gallery.html">معرض الأعمال</a></li>
+                <li><a href="about.html">عن المصور</a></li>
+                <li><a href="contact.html" class="active">التواصل</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- عنوان الصفحة -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">تواصل معنا</h1>
+            <p class="page-subtitle">نحن هنا للإجابة على استفساراتك وخدمتك بأفضل طريقة</p>
+        </div>
+    </section>
+
+    <!-- المحتوى الرئيسي -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-main">
+                <!-- قسم خيارات التواصل -->
+                <div class="contact-options">
+                    <!-- بطاقة واتساب -->
+                    <div class="contact-card">
+                        <h3><i class="fab fa-whatsapp"></i> التواصل عبر واتساب</h3>
+                        <p>للرد السريع والمباشر، يمكنك التواصل معنا عبر واتساب</p>
+                        <a href="https://wa.me/967773684474" class="btn whatsapp-btn" target="_blank" style="background-color: #25D366;">
+                            <i class="fab fa-whatsapp"></i> فتح محادثة واتساب
+                        </a>
+                    </div>
+                    
+                    <!-- بطاقة وسائل التواصل الاجتماعي -->
+                    <div class="contact-card">
+                        <h3><i class="fas fa-share-alt"></i> وسائل التواصل الاجتماعي</h3>
+                        <p>تابع أحدث أعمالنا وجلسات التصوير على منصات التواصل</p>
+                        <div class="social-icons-mini">
+                            <a href="https://www.instagram.com/1k_iiiii?igsh=MTg1N252b2t0aXM5cw==" 
+                               class="social-mini instagram" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@abdallah_ghudid?si=fMwuaKgrMuFrzxNS" 
+                               class="social-mini youtube" target="_blank" rel="noopener">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/1ELHjUvRWV/" 
+                               class="social-mini facebook" target="_blank" rel="noopener">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة معلومات الاتصال -->
+                    <div class="contact-card">
+                        <h3><i class="fas fa-info-circle"></i> معلومات الاتصال</h3>
+                        <p><strong>رقم الهاتف:</strong> 967773684474</p>
+                        <p><strong>البريد الإلكتروني:</strong> info@abdullah-photo.com</p>
+                        <p><strong>ساعات العمل:</strong> الأحد - الخميس (9 ص - 6 م)</p>
+                    </div>
+                </div>
+                
+                <!-- نموذج التواصل -->
+                <div class="contact-form-section">
+                    <h2 class="section-title">أرسل لنا رسالة</h2>
+                    <p class="form-description">املأ النموذج وسنتواصل معك في أقرب وقت</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني *</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف (اختياري)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">نوع الخدمة المطلوبة</label>
+                            <select id="service" name="service">
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="wedding">تصوير أعراس</option>
+                                <option value="portrait">تصوير شخصي</option>
+                                <option value="architecture">تصوير معماري</option>
+                                <option value="nature">تصوير طبيعة</option>
+                                <option value="event">تصوير مناسبات</option>
+                                <option value="consultation">استشارة فنية</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة *</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      placeholder="أخبرنا عن احتياجاتك وتفاصيل مشروعك..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn submit-btn">
+                            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم واتساب الموسع -->
+    <section class="whatsapp-section">
+        <div class="container">
+            <div class="whatsapp-container">
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h2 class="section-title">تواصل فوري عبر واتساب</h2>
+                <p class="whatsapp-description">أرسل رسالتك مباشرة للرد الفوري من المصور</p>
+                
+                <!-- نموذج مختصر للواتساب -->
+                <div class="whatsapp-form">
+                    <div class="form-group">
+                        <label for="whatsapp-name">اسمك</label>
+                        <input type="text" id="whatsapp-name" placeholder="أدخل اسمك">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp-service">نوع الخدمة</label>
+                        <select id="whatsapp-service">
+                            <option value="">اختر الخدمة</option>
+                            <option value="تصوير أعراس">تصوير أعراس</option>
+                            <option value="تصوير شخصي">تصوير شخصي</option>
+                            <option value="تصوير معماري">تصوير معماري</option>
+                            <option value="تصوير طبيعة">تصوير طبيعة</option>
+                            <option value="تصوير مناسبات">تصوير مناسبات</option>
+                            <option value="استفسار عام">استفسار عام</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsapp-message">رسالتك</label>
+                        <textarea id="whatsapp-message" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                    </div>
+                    
+                    <button id="sendWhatsApp" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> إرسال عبر واتساب
+                    </button>
+                    
+                    <div class="whatsapp-alternative">
+                        <p>أو تواصل مباشرة: <strong>967773684474</strong></p>
+                        <a href="https://wa.me/967773684474" class="btn whatsapp-direct" target="_blank">
+                            <i class="fab fa-whatsapp"></i> فتح واتساب الآن
+                        </a>
+                    </div>
+                    
+                    <div id="whatsappMessage" class="whatsapp-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- وسائل التواصل الاجتماعي الموسعة -->
+    <section class="social-media-extended">
+        <div class="container">
+            <h2 class="section-title">تابع أعمالنا على وسائل التواصل</h2>
+            <p class="section-subtitle">شاهد أحدث أعمالنا وتجارب التصوير الحصرية</p>
+            
+            <div class="social-grid">
+                <a href="https://www.instagram.com/1k_iiiii?igsh=MTg1N252b2t0aXM5cw==" 
+                   class="social-card instagram-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>انستقرام</h3>
+                    <p>معرض الصور اليومي وقصص خلف الكواليس</p>
+                    <span class="social-handle">@1k_iiiii</span>
+                </a>
+                
+                <a href="https://youtube.com/@abdallah_ghudid?si=fMwuaKgrMuFrzxNS" 
+                   class="social-card youtube-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>يوتيوب</h3>
+                    <p>فيديوهات تعليمية وجلسات تصوير حقيقية</p>
+                    <span class="social-handle">@abdallah_ghudid</span>
+                </a>
+                
+                <a href="https://www.facebook.com/share/1ELHjUvRWV/" 
+                   class="social-card facebook-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>فيسبوك</h3>
+                    <p>تفاعل مع المجتمع ومشاركة الأعمال</p>
+                    <span class="social-handle">عبدالله غديد</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأسئلة الشائعة -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">أسئلة شائعة</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم تبلغ تكلفة جلسة التصوير؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تختلف التكلفة حسب نوع الجلسة ومدة التصوير والخدمات الإضافية المطلوبة. ننصح بحجز استشارة مجانية لمناقشة احتياجاتك وتقديم عرض سعر دقيق.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كم من الوقت أحتاج لاستلام صوري بعد الجلسة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>عادةً ما تستغرق عملية التحرير والتجهيز من 7 إلى 14 يوم عمل، حسب عدد الصور ونوع التعديلات المطلوبة. للجلسات العاجلة، تتوفر خدمة التجهيز السريع مقابل تكلفة إضافية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تقدمون خدمات التصوير خارج المدينة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خدمات التصوير في جميع أنحاء المملكة. تتضمن التكلفة الإضافية مصاريف السفر والإقامة إذا لزم الأمر. نناقش هذه التفاصيل أثناء حجز الجلسة.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ما هي سياسة الإلغاء أو التأجيل؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك إلغاء أو تأجيل الجلسة قبل 48 ساعة من موعدها دون أي رسوم. للإلغاء بعد هذه المدة، قد تطبق رسوم إدارية. نتفهم الظروف الطارئة ونتعامل مع كل حالة على حدة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>عبدالله عوض بن غديد</h3>
+                    <p>مصور فوتوغرافي محترف بأكثر من 10 سنوات خبرة</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/1k_iiiii?igsh=MTg1N252b2t0aXM5cw==" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@abdallah_ghudid?si=fMwuaKgrMuFrzxNS" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1ELHjUvRWV/" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/967773684474" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2024 جميع الحقوق محفوظة | عبدالله عوض بن غديد</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
