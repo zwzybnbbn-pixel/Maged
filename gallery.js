@@ -1,16 +1,16 @@
 // بيانات الصور للمعرض
 const galleryImages = [
-    { src: "https://i.ibb.co/M55fPDcT/IMG-20251226-WA0017.jpg", category: "nature", title: "منظر طبيعي خلاب" },
-    { src: "https://i.ibb.co/M55fPDcT/IMG-20251226-WA0017.jpg", category: "portrait", title: "جلسة تصوير شخصية" },
+    { src: "https://i.postimg.cc/rpsN7WTz/IMG_20251226_WA0008.jpg", category: "nature", title: "منظر طبيعي خلاب" },
+    { src: "https://i.postimg.cc/1tLBGzLM/IMG_20251226_WA0023.jpg", category: "portrait", title: "جلسة تصوير شخصية" },
     { src: "https://via.placeholder.com/500x400/1A202C/FFFFFF?text=صورة+معمارية+1", category: "architecture", title: "تصميم معماري حديث" },
-    { src: "https://via.placeholder.com/500x400/4A5568/FFFFFF?text=صورة+مناسبة+1", category: "events", title: "تصوير حفل زفاف" },
-    { src: "https://via.placeholder.com/500x400/2D3748/FFFFFF?text=صورة+طبيعة+2", category: "nature", title: "غروب الشمس" },
+    { src: "https://i.postimg.cc/150BFsMH/IMG_20251226_WA0016.jpg", category: "events", title: "تصوير حفل زفاف" },
+    { src: "https://i.postimg.cc/ZR1H8q1d/IMG_20251226_WA0027.jpg", category: "nature", title: "غروب الشمس" },
     { src: "https://via.placeholder.com/500x400/1A202C/FFFFFF?text=صورة+شخصية+2", category: "portrait", title: "بورتريه احترافي" },
     { src: "https://via.placeholder.com/500x400/4A5568/FFFFFF?text=صورة+معمارية+2", category: "architecture", title: "ناطحة سحاب" },
     { src: "https://via.placeholder.com/500x400/2D3748/FFFFFF?text=صورة+مناسبة+2", category: "events", title: "تصوير مناسبة عائلية" },
-    { src: "https://via.placeholder.com/500x400/1A202C/FFFFFF?text=صورة+طبيعة+3", category: "nature", title: "غابة خضراء" },
-    { src: "https://via.placeholder.com/500x400/4A5568/FFFFFF?text=صورة+شخصية+3", category: "portrait", title: "جلسة تصوير فنية" },
-    { src: "https://via.placeholder.com/500x400/2D3748/FFFFFF?text=صورة+معمارية+3", category: "architecture", title: "تصميم داخلي" },
+    { src: "https://i.postimg.cc/8ztby4q9/IMG_20251226_WA0013.jpg", category: "nature", title: "غابة خضراء" },
+    { src: "https://i.postimg.cc/tg4Byw3F/IMG_20251226_WA0030.jpg", category: "portrait", title: "جلسة تصوير فنية" },
+    { src: "https://i.postimg.cc/L8NVyDcS/IMG_20251226_WA0011.jpg", category: "architecture", title: "تصميم داخلي" },
     { src: "https://via.placeholder.com/500x400/1A202C/FFFFFF?text=صورة+مناسبة+3", category: "events", title: "تصوير مؤتمر" }
 ];
 
