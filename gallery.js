@@ -7,7 +7,7 @@ const galleryImages = [
     { src: "https://i.postimg.cc/QMjSBjRT/IMG_20260204_WA0056.jpg", category: "portrait", title: "بورتريه احترافي" },
     { src: "https://i.postimg.cc/6QzcnDK6/IMG_20260204_WA0057.jpg", category: "nature", title: "منظر طبيعي " },
     { src: "https://i.postimg.cc/tg4Byw3F/IMG_20251226_WA0030.jpg", category: "portrait", title: "جلسة تصوير فنية" },
-    { src: "https://i.postimg.cc/L8NVyDcS/IMG_20251226_WA0011.jpg", category: "architecture", title: "تصميم داخلي" },
+    { src: "https://i.postimg.cc/L8NVyDcS/IMG_20251226_WA0011.jpg", category: "architecture", title: " تصوير رياضي" },
 ];
 
 // تحميل المعرض عند تحميل الصفحة
