@@ -2,12 +2,13 @@
 const galleryImages = [
     { src: "https://i.postimg.cc/rpsN7WTz/IMG_20251226_WA0008.jpg", category: "nature", title: "منظر طبيعي خلاب" },
     { src: "https://i.postimg.cc/1tLBGzLM/IMG_20251226_WA0023.jpg", category: "portrait", title: "جلسة تصوير شخصية" },
-    { src: "https://i.postimg.cc/150BFsMH/IMG_20251226_WA0016.jpg", category: "events", title: "تصوير حفل زفاف" },
+    { src: "https://i.postimg.cc/TPXqN5Mp/IMG_20251226_WA0029.jpg", category: "events", title: " منظر طبيعي " },
     { src: "https://i.postimg.cc/ZR1H8q1d/IMG_20251226_WA0027.jpg", category: "nature", title: "غروب الشمس" },
     { src: "https://i.postimg.cc/QMjSBjRT/IMG_20260204_WA0056.jpg", category: "portrait", title: "بورتريه احترافي" },
     { src: "https://i.postimg.cc/6QzcnDK6/IMG_20260204_WA0057.jpg", category: "nature", title: "منظر طبيعي " },
     { src: "https://i.postimg.cc/tg4Byw3F/IMG_20251226_WA0030.jpg", category: "portrait", title: "جلسة تصوير فنية" },
     { src: "https://i.postimg.cc/L8NVyDcS/IMG_20251226_WA0011.jpg", category: "architecture", title: " تصوير رياضي" },
+    { src: "https://i.postimg.cc/Qd7Jqkz1/IMG_20251226_WA0006.jpg", category: "nature", title: "منظر خلاب" },
 ];
 
 // تحميل المعرض عند تحميل الصفحة
