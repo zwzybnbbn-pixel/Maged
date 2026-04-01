@@ -429,11 +429,11 @@
     <div class="container hero-grid">
       <div class="hero-text" data-aos="fade-right">
         <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية السعودية</div>
-        <h1 class="hero-title">عامر <span class="gold-text">باقطيان</span><br>مندوب مبيعات متميز</h1>
+        <h1 class="hero-title">باقطيان <span class="gold-text">عامر</span><br>مندوب مبيعات متميز</h1>
         <p style="font-size: 1rem; margin: 1rem 0;">خبرة عملية تمتد لأكثر من 12 عاماً في مجال المبيعات، حاصل على جوائز التميز من شركة المستقبل، وأحقق أرقاماً قياسية في قطاع المبيعات بالمملكة.</p>
         <div class="hero-stats">
           <div class="stat-block"><h3>+320</h3><p>عميل دائم</p></div>
-          <div class="stat-block"><h3>+185M</h3><p>ريال مبيعات</p></div>
+          <div class="stat-block"><h3>35%</h3><p>زيادة المبيعات </p></div>
           <div class="stat-block"><h3>12+</h3><p>سنوات خبرة</p></div>
           <div class="stat-block"><h3>5</h3><p>جوائز تميز</p></div>
         </div>
@@ -523,7 +523,7 @@
       <div class="section-title" style="margin-bottom: 1.5rem;">إنجازات <span>قياسية</span> في شركة المستقبل</div>
       <div class="counters-flex">
         <div class="counter-item"><h2 id="counterClients">0</h2><p>عميل دائم</p></div>
-        <div class="counter-item"><h2 id="counterRevenue">0</h2><p>مليون ريال مبيعات</p></div>
+        <div class="counter-item"><h2 id="counterRevenue">0</h2><p> زيادة نسبة المبيعات</p></div>
         <div class="counter-item"><h2 id="counterAwards">0</h2><p>جائزة تميز</p></div>
         <div class="counter-item"><h2 id="counterYears">0</h2><p>سنة في شركة المستقبل</p></div>
       </div>
@@ -572,6 +572,21 @@
       </div>
     </div>
   </section>
+  
+  <div class="developer-signature" style="text-align: center; padding: 20px 0; background: rgba(0,0,0,0.2); border-top: 1px dashed rgba(212, 175, 55, 0.2);">
+    <p style="font-size: 0.85rem; color: #ccd6f0; margin-bottom: 5px;">تم التطوير بواسطة</p>
+    <h4 style="color: #d4af37; font-weight: 700; letter-spacing: 1px;">م/ ماجد قاسم بن عمرو</h4>
+    <div style="margin-top: 10px;">
+        <a href="tel:+967776503890" style="color: #eef3fc; text-decoration: none; font-size: 0.9rem; direction: ltr; display: inline-block;">
+            <i class="fas fa-phone-alt" style="color: #d4af37; margin-left: 5px;"></i> 776 503 890
+        </a>
+        <span style="margin: 0 10px; color: rgba(212, 175, 55, 0.5);">|</span>
+        <a href="https://wa.me/967776503890" style="color: #25d366; text-decoration: none; font-size: 1.1rem;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</div>
+
 
   <footer>
     <p>© 2025 عامر باقطيان - مندوب مبيعات متميز في الرياض | شركة المستقبل</p>
@@ -598,6 +613,44 @@
       }
     }, stepTime);
   }
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1. استخراج البيانات من الحقول
+    const name = document.getElementById('fullName').value.trim();
+    const phone = document.getElementById('phoneContact').value.trim();
+    const email = document.querySelector('input[placeholder="البريد الإلكتروني"]').value.trim();
+    const service = document.getElementById('serviceType').value;
+    const message = document.getElementById('messageText').value.trim();
+    const statusDiv = document.getElementById('formStatus');
+
+    // 2. رقم الواتساب المستهدف (بدون علامة +)
+    const whatsappNumber = "966531906627";
+
+    // 3. تنسيق نص الرسالة (استخدام %0A للسطر الجديد)
+    let fullMessage = `*طلب جديد من الموقع الشخصي* 🏆%0A%0A`;
+    fullMessage += `*الاسم:* ${name}%0A`;
+    fullMessage += `*الجوال:* ${phone}%0A`;
+    if(email) fullMessage += `*البريد:* ${email}%0A`;
+    fullMessage += `*نوع الخدمة:* ${service}%0A`;
+    if(message) fullMessage += `*التفاصيل:* ${message}`;
+
+    // 4. إظهار حالة الإرسال للمستخدم
+    statusDiv.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> جاري فتح واتساب...';
+    statusDiv.style.color = "#d4af37";
+
+    // 5. فتح الرابط بعد تأخير بسيط لإعطاء تجربة مستخدم أفضل
+    setTimeout(() => {
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
+        window.open(whatsappUrl, '_blank');
+        
+        statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> تم التحويل للواتساب بنجاح!';
+        statusDiv.style.color = "#a5d6a5";
+        
+        // إعادة تعيين النموذج
+        document.getElementById('contactForm').reset();
+    }, 800);
+});
 
   const counterClients = document.getElementById('counterClients');
   const counterRevenue = document.getElementById('counterRevenue');
@@ -609,7 +662,7 @@
     if (entries[0].isIntersecting && !counted) {
       counted = true;
       animateNumber(counterClients, 0, 324, 1800, '+');
-      animateNumber(counterRevenue, 0, 185, 2000, 'M');
+      animateNumber(counterRevenue, 0, 35, 2000, '%');
       animateNumber(counterAwards, 0, 5, 1500, '');
       animateNumber(counterYears, 0, 12, 1500, '+');
     }
@@ -642,6 +695,8 @@
       }
     });
   });
+console.log("%c🚀 Developed by: Eng. Majid Qasim Bin Amr", "color: #d4af37; font-size: 16px; font-weight: bold;");
+console.log("%cContact: +967 776 503 890", "color: #fff; font-size: 12px;");
 
   // Contact Form Handler
   const contactForm = document.getElementById('contactForm');
