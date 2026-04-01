@@ -1,724 +1,292 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
-  <meta name="description" content="عامر باقطيان - مندوب مبيعات متميز في الرياض، خبرة عملية استثنائية في شركة المستقبل، حائز على جوائز التميز في المبيعات.">
-  <meta name="keywords" content="عامر باقطيان, مندوب مبيعات الرياض, شركة المستقبل, مبيعات السعودية, أفضل مندوب مبيعات">
-  <title>عامر باقطيان | مندوب مبيعات متميز - الرياض</title>
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>المستقبل للحديد | قوة لا تلين</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --iron-orange: #ff5e13;
+      --dark-steel: #0f1113;
+      --card-bg: #1a1d21;
     }
 
-    body {
-      font-family: 'Cairo', sans-serif;
-      background: #0a0c12;
-      color: #eef3fc;
-      line-height: 1.5;
-      overflow-x: hidden;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
+
+    body { background-color: var(--dark-steel); color: white; line-height: 1.6; }
+
+    /* Header Mobile Optimized */
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(15, 17, 19, 0.95);
+      padding: 12px 5%;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 2px solid var(--iron-orange);
+    }
+    
+    /* About Section Styles */
+.about-section { padding: 60px 20px; background: #0b0d0f; text-align: center; }
+.badge { 
+    display: inline-block; padding: 5px 15px; background: rgba(255, 94, 19, 0.1); 
+    color: var(--iron-orange); border: 1px solid var(--iron-orange); 
+    border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px;
+}
+.about-section h2 { font-size: 2rem; margin-bottom: 20px; font-weight: 900; }
+.about-section h2 span { color: var(--iron-orange); }
+.about-text { color: #aaa; font-size: 0.95rem; max-width: 800px; margin: 0 auto 30px; line-height: 1.8; }
+
+.mission-vision { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 30px; }
+.mv-card { background: var(--card-bg); padding: 25px; border-radius: 12px; border-right: 4px solid var(--iron-orange); text-align: right; }
+.mv-card i { color: var(--iron-orange); font-size: 2rem; margin-bottom: 15px; }
+.mv-card h4 { margin-bottom: 10px; font-size: 1.2rem; }
+.mv-card p { color: #888; font-size: 0.85rem; }
+
+/* Achievements Styles */
+.achievements { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000'); background-attachment: fixed; background-size: cover; padding: 50px 20px; }
+.ach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ach-item { text-align: center; }
+.ach-item i { color: var(--iron-orange); font-size: 2.5rem; margin-bottom: 10px; }
+.ach-item .number { font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 5px; }
+.ach-item p { font-size: 0.8rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; }
+
+/* استجابة للجوال */
+@media (min-width: 768px) {
+    .mission-vision { grid-template-columns: 1fr 1fr; }
+    .ach-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+    .logo { font-size: 1.3rem; font-weight: 900; }
+    .logo span { color: var(--iron-orange); }
+
+    .whatsapp-btn-top {
+      background: #25d366; color: white; padding: 6px 12px;
+      border-radius: 20px; text-decoration: none; font-size: 0.8rem; font-weight: bold;
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #1a1e26; }
-    ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
-
-    /* Background */
-    .premium-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: linear-gradient(135deg, #0b0e16, #04060c);
-    }
-    .premium-bg::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 40%, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
-      background-size: 35px 35px;
-      pointer-events: none;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.2rem;
-      width: 100%;
-    }
-
-    /* Header - متجاوب بالكامل */
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(10, 12, 18, 0.95);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-      padding: 0.8rem 0;
-    }
-    .header-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-    .logo h1 {
-      font-size: 1.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #fff, #d4af37);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .logo p {
-      font-size: 0.65rem;
-      color: #d4af37;
-      letter-spacing: 1px;
-    }
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
-      color: #eef3fc;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.85rem;
-      transition: 0.2s;
-      padding: 0.3rem 0;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: #d4af37;
-    }
-    .btn-gold {
-      background: transparent;
-      border: 1.5px solid #d4af37;
-      padding: 0.5rem 1.2rem;
-      border-radius: 40px;
-      color: #d4af37;
-      font-weight: 700;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: 0.3s;
-      white-space: nowrap;
-    }
-    .btn-gold:hover {
-      background: #d4af37;
-      color: #0a0c12;
-    }
-    .btn-filled {
-      background: #d4af37;
-      color: #0a0c12;
-      border: none;
-    }
-
-    /* Hero Section - متجاوب بالكامل */
+    /* Hero Section - Mobile Height */
     .hero {
-      min-height: auto;
-      padding: 3rem 0 2rem;
+      height: 70vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800');
+      background-size: cover; background-position: center;
+      display: flex; flex-direction: column; justify-content: center;
+      text-align: center; padding: 20px;
     }
-    .hero-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-      text-align: center;
+    .hero h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 15px; line-height: 1.2; }
+    .hero p { font-size: 1rem; color: #ccc; margin-bottom: 25px; }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      padding: 20px; background: #000;
     }
-    @media (min-width: 768px) {
-      .hero-grid {
-        flex-direction: row;
-        text-align: right;
-        gap: 3rem;
-      }
-      .hero-text { flex: 1.5; text-align: right; }
-      .hero-avatar { flex: 1; }
+    .stat-card {
+      background: var(--card-bg); padding: 15px; text-align: center;
+      border-radius: 8px; border-bottom: 3px solid var(--iron-orange);
     }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.15);
-      border-right: 3px solid #d4af37;
-      padding: 0.3rem 1rem;
-      border-radius: 30px;
-      font-size: 0.75rem;
-      margin-bottom: 1rem;
+    .stat-card h3 { color: var(--iron-orange); font-size: 1.5rem; }
+    .stat-card p { font-size: 0.75rem; color: #888; }
+
+    /* Products Mobile List */
+    .section-title { padding: 30px 20px 10px; font-size: 1.5rem; border-right: 5px solid var(--iron-orange); margin: 20px; }
+    
+    .product-list { padding: 10px 20px; }
+    .product-item {
+      background: var(--card-bg); border-radius: 12px; margin-bottom: 20px;
+      overflow: hidden; border: 1px solid #333;
     }
-    .hero-title {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.3;
-    }
-    @media (min-width: 768px) {
-      .hero-title { font-size: 2.8rem; }
-    }
-    .gold-text {
-      color: #d4af37;
-      border-bottom: 2px solid #d4af37;
-      display: inline-block;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      margin: 1.5rem 0;
-    }
-    @media (min-width: 768px) {
-      .hero-stats { justify-content: flex-start; }
-    }
-    .stat-block h3 {
-      font-size: 1.6rem;
-      color: #d4af37;
-    }
-    .stat-block p {
-      font-size: 0.7rem;
-    }
-    .avatar-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #d4af37;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    }
-    @media (min-width: 768px) {
-      .avatar-img { width: 260px; height: 260px; }
+    .product-img { height: 180px; background-size: cover; background-position: center; }
+    .product-details { padding: 15px; }
+    .product-details h4 { font-size: 1.2rem; color: var(--iron-orange); margin-bottom: 8px; }
+    .product-details p { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; }
+    
+    .btn-order {
+      display: block; width: 100%; padding: 12px; background: var(--iron-orange);
+      color: white; text-align: center; text-decoration: none;
+      font-weight: 900; border-radius: 6px; font-size: 1rem;
     }
 
-    /* Sections */
-    .section {
-      padding: 3rem 0;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-    }
-    .section-title {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      font-weight: 800;
-    }
-    @media (min-width: 768px) {
-      .section-title { font-size: 2.2rem; }
-    }
-    .section-title span {
-      color: #d4af37;
-    }
+    /* Pricing Table Mobile (Scrollable) */
+    .table-container { overflow-x: auto; margin: 20px; background: var(--card-bg); border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { padding: 12px; text-align: center; border-bottom: 1px solid #333; }
+    th { background: #222; color: var(--iron-orange); }
 
-    /* CV Card */
-    .cv-card {
-      background: linear-gradient(135deg, #12161f, #0b0e16);
-      border-radius: 28px;
-      padding: 1.5rem;
-      border: 1px solid rgba(212, 175, 55, 0.25);
+    /* Developer Footer */
+    footer { padding: 40px 20px; background: #050505; text-align: center; border-top: 3px solid var(--iron-orange); }
+    .dev-box {
+      margin-top: 30px; padding: 15px; border: 1px dashed #444; border-radius: 10px;
     }
-    .cv-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    @media (min-width: 768px) {
-      .cv-grid { flex-direction: row; }
-      .cv-item { flex: 1; }
-    }
-    .cv-item {
-      background: rgba(0,0,0,0.3);
-      border-radius: 20px;
-      padding: 1.2rem;
-    }
-    .cv-item h3 {
-      color: #d4af37;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .achievement-list {
-      list-style: none;
-    }
-    .achievement-list li {
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.85rem;
-    }
-    .achievement-list li i {
-      color: #d4af37;
-      width: 1.2rem;
-    }
-
-    /* Experience Timeline */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .timeline-item {
-      background: rgba(0,0,0,0.3);
-      border-radius: 20px;
-      padding: 1.2rem;
-    }
-    @media (min-width: 640px) {
-      .timeline-item { display: flex; gap: 1rem; align-items: flex-start; }
-    }
-    .timeline-year {
-      min-width: 100px;
-      font-weight: 800;
-      color: #d4af37;
-      font-size: 1rem;
-    }
-
-    /* Services Grid - 100% responsive */
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-    }
-    @media (min-width: 480px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 900px) {
-      .services-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-    .service-card {
-      background: rgba(18, 22, 30, 0.7);
-      backdrop-filter: blur(8px);
-      border-radius: 24px;
-      padding: 1.2rem;
-      text-align: center;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      transition: 0.2s;
-    }
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: #d4af37;
-    }
-    .service-icon {
-      font-size: 2rem;
-      color: #d4af37;
-      margin-bottom: 0.5rem;
-    }
-    .service-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    .service-card p {
-      font-size: 0.8rem;
-      color: #ccd6f0;
-    }
-
-    /* Counters */
-    .counter-premium {
-      background: #0f121b;
-      border-radius: 28px;
-      padding: 1.8rem;
-    }
-    .counters-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-    .counter-item {
-      text-align: center;
-      min-width: 100px;
-    }
-    .counter-item h2 {
-      font-size: 2rem;
-      color: #d4af37;
-    }
-
-    /* Testimonials */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-    }
-    @media (min-width: 640px) {
-      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1000px) {
-      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .testi-card {
-      background: rgba(0,0,0,0.35);
-      border-radius: 24px;
-      padding: 1.2rem;
-      text-align: center;
-    }
-
-    /* Contact - متجاوب 100% */
-    .contact-mega {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      background: rgba(0,0,0,0.45);
-      border-radius: 32px;
-      padding: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .contact-mega { flex-direction: row; }
-      .contact-info, .contact-form { flex: 1; }
-    }
-    .contact-mega input, .contact-mega textarea, .contact-mega select {
-      width: 100%;
-      background: #1a1f2a;
-      border: 1px solid #2f3545;
-      border-radius: 40px;
-      padding: 0.8rem 1.2rem;
-      margin-bottom: 0.8rem;
-      color: white;
-      font-family: 'Cairo', sans-serif;
-      font-size: 0.85rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
-      font-size: 0.75rem;
-    }
-
-    /* Buttons & Adjustments */
-    button, .btn-gold {
-      font-family: 'Cairo', sans-serif;
-    }
-    .text-gold {
-      color: #d4af37;
-    }
-    hr {
-      border-color: rgba(212, 175, 55, 0.2);
+    .dev-box span { color: var(--iron-orange); font-weight: 900; display: block; font-size: 1.1rem; }
+    
+    /* WhatsApp Floating Button */
+    .floating-wa {
+      position: fixed; bottom: 20px; left: 20px;
+      background: #25d366; width: 55px; height: 55px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000;
     }
   </style>
 </head>
 <body>
-<div class="premium-bg"></div>
 
-<div class="sticky-header">
-  <div class="container header-flex">
-    <div class="logo">
-      <h1>عامر باقطيان</h1>
-      <p>مُندوب مبيعات متميز | الرياض</p>
+<header>
+  <div class="logo">المستقبل<span> للحديد</span></div>
+  <a href="https://wa.me/966531906627" class="whatsapp-btn-top">اتصل الآن</a>
+</header>
+
+<div class="hero">
+  <h1>حديد المستقبل <br>صلابة لا تلين</h1>
+  <p>نورد أجود أنواع الحديد الإنشائي والصناعي لجميع مشاريع المملكة.</p>
+  <a href="#products" class="btn-order" style="width: auto; align-self: center; padding: 12px 30px;">تصفح المنتجات</a>
+</div>
+
+<div class="stats-grid">
+  <div class="stat-card"><h3>+500</h3><p>مشروع منجز</p></div>
+  <div class="stat-card"><h3>+120K</h3><p>طن سنوياً</p></div>
+  <div class="stat-card"><h3>100%</h3><p>جودة وطنية</p></div>
+  <div class="stat-card"><h3>24/7</h3><p>دعم وتوصيل</p></div>
+</div>
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="badge">من نحن</div>
+    <h2>ريادة في صناعة <span>الصلب</span></h2>
+    <p class="about-text">
+      تأسست **شركة المستقبل للحديد والصلب** لتكون الركيزة الأساسية في نهضة العمران بالمملكة. نحن نفخر بتوريد أجود أنواع الحديد والصلب المتوافق مع المعايير الدولية (ASTM) والمواصفات السعودية (SASO). رؤيتنا تتجاوز مجرد التوريد؛ نحن شركاء في بناء مستقبل الوطن من خلال توفير حلول حديدية متكاملة للمشاريع السكنية، التجارية، والصناعية الكبرى.
+    </p>
+    <div class="mission-vision">
+      <div class="mv-card">
+        <i class="fas fa-bullseye"></i>
+        <h4>رسالتنا</h4>
+        <p>توفير حديد عالي الجودة بأسعار تنافسية مع سرعة فائقة في التنفيذ والتوريد.</p>
+      </div>
+      <div class="mv-card">
+        <i class="fas fa-eye"></i>
+        <h4>رؤيتنا</h4>
+        <p>أن نصبح المورد الأول والخياري الأمثل لقطاع الإنشاءات والمقاولات في المنطقة.</p>
+      </div>
     </div>
-    <div class="nav-links">
-      <a href="#home">الرئيسية</a>
-      <a href="#cv">السيرة</a>
-      <a href="#experience">الخبرات</a>
-      <a href="#awards">الجوائز</a>
-      <a href="#contact">تواصل</a>
+  </div>
+</section>
+<section class="achievements" id="achievements">
+  <div class="ach-grid">
+    <div class="ach-item">
+      <i class="fas fa-weight-hanging"></i>
+      <div class="number" data-target="150000">0</div>
+      <p>طن تم توريده</p>
     </div>
-    <button class="btn-gold" id="contactNavBtn"><i class="fas fa-phone-alt"></i> تواصل معي</button>
+    <div class="ach-item">
+      <i class="fas fa-city"></i>
+      <div class="number" data-target="850">0</div>
+      <p>مشروع منجز</p>
+    </div>
+    <div class="ach-item">
+      <i class="fas fa-users"></i>
+      <div class="number" data-target="1200">0</div>
+      <p>عميل واثق</p>
+    </div>
+    <div class="ach-item">
+      <i class="fas fa-truck-moving"></i>
+      <div class="number" data-target="24">0</div>
+      <p>ساعة توصيل</p>
+    </div>
+  </div>
+</section>
+<h2 class="section-title">منتجاتنا <span>الأساسية</span></h2>
+
+<div class="product-list" id="products">
+  <div class="product-item">
+    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1533038590840-1cde6e668a91?q=80&w=400');"></div>
+    <div class="product-details">
+      <h4>حديد تسليح (سابك)</h4>
+      <p>متوفر بجميع المقاسات من 8 ملم إلى 32 ملم. جودة عالية ومطابق للمواصفات.</p>
+      <a href="https://wa.me/966531906627?text=استفسار عن حديد تسليح" class="btn-order">اطلب عبر واتساب</a>
+    </div>
+  </div>
+
+  <div class="product-item">
+    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1516216628859-9bccecab13ca?q=80&w=400');"></div>
+    <div class="product-details">
+      <h4>كمرات حديدية (H/I Beam)</h4>
+      <p>كمرات فولاذية ثقيلة للمستودعات والمنشآت الضخمة بكافة القياسات.</p>
+      <a href="https://wa.me/966531906627?text=استفسار عن كمرات حديدية" class="btn-order">اطلب عبر واتساب</a>
+    </div>
   </div>
 </div>
 
-<main>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text" data-aos="fade-right">
-        <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> الرياض - المملكة العربية السعودية</div>
-        <h1 class="hero-title">باقطيان <span class="gold-text">عامر</span><br>مندوب مبيعات متميز</h1>
-        <p style="font-size: 1rem; margin: 1rem 0;">خبرة عملية تمتد لأكثر من 12 عاماً في مجال المبيعات، حاصل على جوائز التميز من شركة المستقبل، وأحقق أرقاماً قياسية في قطاع المبيعات بالمملكة.</p>
-        <div class="hero-stats">
-          <div class="stat-block"><h3>+320</h3><p>عميل دائم</p></div>
-          <div class="stat-block"><h3>35%</h3><p>زيادة المبيعات </p></div>
-          <div class="stat-block"><h3>12+</h3><p>سنوات خبرة</p></div>
-          <div class="stat-block"><h3>5</h3><p>جوائز تميز</p></div>
-        </div>
-        <button class="btn-gold btn-filled" id="heroContactBtn" style="padding: 0.7rem 1.5rem;"><i class="fas fa-file-signature"></i> طلب عرض سعر</button>
-      </div>
-      <div class="hero-avatar" data-aos="fade-left" style="text-align: center;">
-        <img class="avatar-img" src="https://i.postimg.cc/PJKkSdvj/IMG-20260402-WA0002.jpg" alt="عامر باقطيان - مندوب مبيعات الرياض">
-      </div>
-    </div>
-  </section>
+<h2 class="section-title">الأسعار <span>التقريبية</span></h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>المنتج</th>
+        <th>المقاس</th>
+        <th>السعر (طن)</th>
+      </tr>
+    </thead>
+    
 
-  <!-- السيرة الذاتية - بدون مؤهلات تعليمية، خبرة عملية فقط -->
-  <section id="cv" class="section">
-    <div class="container">
-      <div class="section-title">السيرة <span>الذاتية</span> | الخبرة العملية</div>
-      <div class="cv-card" data-aos="fade-up">
-        <div class="cv-grid">
-          <div class="cv-item">
-            <h3><i class="fas fa-user-check"></i> الملف الشخصي</h3>
-            <p>عامر باقطيان، مندوب مبيعات متميز مقيم في الرياض. يتمتع بخبرة عملية طويلة في قطاع المبيعات، معروف بقدرته على بناء علاقات قوية مع العملاء وتحقيق أهداف المبيعات بكفاءة عالية. حاصل على جوائز متعددة من شركة المستقبل تقديراً لإنجازاته الاستثنائية.</p>
-          </div>
-          <div class="cv-item">
-            <h3><i class="fas fa-chart-line"></i> المهارات البيعية</h3>
-            <ul class="achievement-list">
-              <li><i class="fas fa-check-circle"></i> إدارة علاقات العملاء (CRM)</li>
-              <li><i class="fas fa-check-circle"></i> التفاوض وإتمام الصفقات</li>
-              <li><i class="fas fa-check-circle"></i> تحليل السوق السعودي</li>
-              <li><i class="fas fa-check-circle"></i> قيادة فرق المبيعات</li>
-              <li><i class="fas fa-check-circle"></i> استراتيجيات اختراق الأسواق</li>
-            </ul>
-          </div>
-          <div class="cv-item">
-            <h3><i class="fas fa-trophy"></i> أبرز الجوائز</h3>
-            <ul class="achievement-list">
-              <li><i class="fas fa-medal"></i> جائزة أفضل مندوب مبيعات - شركة المستقبل 2024</li>
-              <li><i class="fas fa-medal"></i> جائزة التميز في المبيعات - شركة المستقبل 2023</li>
-              <li><i class="fas fa-medal"></i> أفضل أداء مبيعات في المنطقة الوسطى 2022</li>
-              <li><i class="fas fa-medal"></i> جائزة القيادة البيعية - شركة المستقبل 2021</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- الخبرات العملية (بدون مؤهلات تعليمية) -->
-  <section id="experience" class="section">
-    <div class="container">
-      <div class="section-title">الخبرات <span>العملية</span> المتميزة</div>
-      <div class="timeline">
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-year">2021 - حتى الآن</div>
-          <div><h3 style="color:#d4af37;">مندوب مبيعات أول | شركة المستقبل - الرياض</h3><p>قيادة عمليات المبيعات لأكبر العملاء في القطاع الخاص، تحقيق نمو سنوي في المبيعات بنسبة 65%، والحصول على جائزة أفضل مندوب مبيعات لعام 2024. إدارة محفظة عملاء تتجاوز 150 عميلاً استراتيجياً.</p></div>
-        </div>
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-year">2017 - 2021</div>
-          <div><h3 style="color:#d4af37;">مندوب مبيعات محترف | شركة المستقبل - الرياض</h3><p>تطوير قاعدة عملاء جديدة في منطقة الرياض، تحقيق أعلى معدل تحويل للمبيعات في الفريق، الفوز بجائزة التميز في المبيعات لعام 2020. تدريب مندوبين جدد على استراتيجيات البيع الفعالة.</p></div>
-        </div>
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-year">2013 - 2017</div>
-          <div><h3 style="color:#d4af37;">مندوب مبيعات | شركة المستقبل - الرياض</h3><p>بداية المسيرة المهنية في شركة المستقبل، تميز سريع في تحقيق الأهداف الشهرية، حصل على جائزة أفضل موظف جديد، وساهم في زيادة حصة الشركة السوقية بنسبة 25%.</p></div>
-        </div>
-        <div class="timeline-item" data-aos="fade-left">
-          <div class="timeline-year">2010 - 2013</div>
-          <div><h3 style="color:#d4af37;">ممثل مبيعات | شركة الاتصالات السعودية (STC)</h3><p>بداية الخبرة العملية في مجال المبيعات، اكتساب مهارات التواصل مع العملاء، تحقيق نسب إنجاز تفوق 120% من الأهداف المحددة.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- خدماتي / مجالات التميز -->
-  <section class="section">
-    <div class="container">
-      <div class="section-title">مجالات <span>التميز البيعي</span></div>
-      <div class="services-grid">
-        <div class="service-card" data-aos="zoom-in"><div class="service-icon"><i class="fas fa-chart-simple"></i></div><h3>استراتيجيات البيع</h3><p>خطط مبيعات مخصصة لتحقيق أهدافك بأسرع وقت</p></div>
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="100"><div class="service-icon"><i class="fas fa-handshake"></i></div><h3>إدارة العملاء VIP</h3><p>بناء علاقات طويلة الأمد مع كبار العملاء</p></div>
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="200"><div class="service-icon"><i class="fas fa-chart-line"></i></div><h3>تحليل السوق</h3><p>فهم عميق للسوق السعودي واحتياجاته</p></div>
-        <div class="service-card" data-aos="zoom-in" data-aos-delay="300"><div class="service-icon"><i class="fas fa-tasks"></i></div><h3>إدارة العقود</h3><p>تفاوض وإبرام عقود مبيعات احترافية</p></div>
-      </div>
-    </div>
-  </section>
+    <tbody>
+      <tr><td>حديد وطني</td><td>12-16 ملم</td><td>2750 ر.س</td></tr>
+      <tr><td>حديد إماراتي</td><td>14 ملم</td><td>2820 ر.س</td></tr>
+      <tr><td>شبك أرضيات</td><td>8 ملم</td><td>2550 ر.س</td></tr>
+    </tbody>
+  </table>
+</div>
 
-  <!-- إنجازات رقمية مع عداد -->
-  <section id="awards" class="section">
-    <div class="container counter-premium" data-aos="fade-up">
-      <div class="section-title" style="margin-bottom: 1.5rem;">إنجازات <span>قياسية</span> في شركة المستقبل</div>
-      <div class="counters-flex">
-        <div class="counter-item"><h2 id="counterClients">0</h2><p>عميل دائم</p></div>
-        <div class="counter-item"><h2 id="counterRevenue">0</h2><p> زيادة نسبة المبيعات</p></div>
-        <div class="counter-item"><h2 id="counterAwards">0</h2><p>جائزة تميز</p></div>
-        <div class="counter-item"><h2 id="counterYears">0</h2><p>سنة في شركة المستقبل</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- شهادات من قادة الأعمال -->
-  <div class="container" style="margin: 2rem auto;">
-    <div class="section-title">آراء <span>قادة الأعمال</span></div>
-    <div class="testimonials-grid">
-      <div class="testi-card"><i class="fas fa-quote-right" style="font-size: 1.5rem; color:#d4af37;"></i><p style="margin:0.8rem 0; font-size:0.9rem;">"عامر باقطيان من أفضل المندوبين الذين عملت معهم. احترافية عالية وإلتزام كبير بتحقيق الأهداف."</p><h4 style="color:#d4af37;">- م. فهد العتيبي</h4><p style="font-size:0.7rem;">المدير التنفيذي، شركة المستقبل</p></div>
-      <div class="testi-card"><i class="fas fa-quote-right" style="font-size: 1.5rem; color:#d4af37;"></i><p style="margin:0.8rem 0; font-size:0.9rem;">"ساهم بشكل كبير في تطوير أعمالنا، نوصي به بشدة لأي شركة تبحث عن التميز."</p><h4 style="color:#d4af37;">- أ. سعد القحطاني</h4><p style="font-size:0.7rem;">مدير المبيعات الإقليمي</p></div>
-      <div class="testi-card"><i class="fas fa-quote-right" style="font-size: 1.5rem; color:#d4af37;"></i><p style="margin:0.8rem 0; font-size:0.9rem;">"خبرة عملية مميزة، وفهم عميق للسوق السعودي. يستحق كل الجوائز التي حصل عليها."</p><h4 style="color:#d4af37;">- د. خالد الزهراني</h4><p style="font-size:0.7rem;">مستشار أعمال</p></div>
-    </div>
-  </div>
-
-  <!-- تواصل مع عامر -->
-  <section id="contact" class="section">
-    <div class="container contact-mega" data-aos="fade-up">
-      <div class="contact-info">
-        <h2 style="font-size: 1.6rem;">تواصل مع <span style="color:#d4af37;">عامر باقطيان</span></h2>
-        <p style="margin: 0.8rem 0;">مندوب مبيعات متميز في الرياض، جاهز لخدمتك وتلبية احتياجاتك.</p>
-        <div style="margin: 1.2rem 0;"><i class="fas fa-phone-alt text-gold"></i> +966 55 888 1234</div>
-        <div style="margin: 0.5rem 0;"><i class="fas fa-envelope text-gold"></i> amer.baqtyan@future.com.sa</div>
-        <div><i class="fas fa-map-marker-alt text-gold"></i> الرياض - المملكة العربية السعودية</div>
-        <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-          <a href="#" style="color:#d4af37; font-size: 1.3rem;"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" style="color:#d4af37; font-size: 1.3rem;"><i class="fab fa-twitter"></i></a>
-          <a href="#" style="color:#d4af37; font-size: 1.3rem;"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="contact-form">
-        <form id="contactForm">
-          <input type="text" placeholder="الاسم الكامل *" id="fullName" required>
-          <input type="tel" placeholder="رقم الجوال *" id="phoneContact" required>
-          <input type="email" placeholder="البريد الإلكتروني">
-          <select id="serviceType">
-            <option>طلب عرض سعر</option>
-            <option>استفسار عن منتج</option>
-            <option>اجتماع تجاري</option>
-          </select>
-          <textarea rows="3" placeholder="تفاصيل طلبك..." id="messageText"></textarea>
-          <button type="submit" class="btn-gold btn-filled" style="width:100%;"><i class="fas fa-paper-plane"></i> إرسال الطلب</button>
-        </form>
-        <div id="formStatus" style="margin-top: 0.8rem; text-align:center; font-size:0.8rem;"></div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <h3>شركة المستقبل للحديد والصلب</h3>
+  <p style="color: #666; font-size: 0.8rem; margin-top: 10px;">الرياض - المنطقة الصناعية | +966531906627</p>
   
-  <div class="developer-signature" style="text-align: center; padding: 20px 0; background: rgba(0,0,0,0.2); border-top: 1px dashed rgba(212, 175, 55, 0.2);">
-    <p style="font-size: 0.85rem; color: #ccd6f0; margin-bottom: 5px;">تم التطوير بواسطة</p>
-    <h4 style="color: #d4af37; font-weight: 700; letter-spacing: 1px;">م/ ماجد قاسم بن عمرو</h4>
-    <div style="margin-top: 10px;">
-        <a href="tel:+967776503890" style="color: #eef3fc; text-decoration: none; font-size: 0.9rem; direction: ltr; display: inline-block;">
-            <i class="fas fa-phone-alt" style="color: #d4af37; margin-left: 5px;"></i> 776 503 890
-        </a>
-        <span style="margin: 0 10px; color: rgba(212, 175, 55, 0.5);">|</span>
-        <a href="https://wa.me/967776503890" style="color: #25d366; text-decoration: none; font-size: 1.1rem;">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-</div>
+  <div class="dev-box">
+    <p style="font-size: 0.8rem; color: #888; margin-bottom: 5px;">تم التطوير بواسطة</p>
+    <span>م/ ماجد قاسم بن عمرو</span>
+    <p style="font-size: 0.85rem; margin-top: 5px;">للتواصل: 776503890</p>
+  </div>
+</footer>
 
-
-  <footer>
-    <p>© 2025 عامر باقطيان - مندوب مبيعات متميز في الرياض | شركة المستقبل</p>
-    <p style="margin-top: 0.3rem; font-size: 0.7rem;">خبرة عملية تمتد لأكثر من 12 عاماً في خدمة عملاء المملكة</p>
-  </footer>
-</main>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<a href="https://wa.me/966531906627" class="floating-wa">
+  <i class="fab fa-whatsapp"></i>
+</a>
 <script>
-  AOS.init({ duration: 600, once: true });
+// تأثير عداد الأرقام عند التمرير
+const counters = document.querySelectorAll('.number');
+const speed = 200; 
 
-  // Counters Animation
-  function animateNumber(element, start, end, duration, suffix = '') {
-    let range = end - start;
-    let stepTime = Math.abs(Math.floor(duration / range));
-    let current = start;
-    let timer = setInterval(() => {
-      current += (range > 0 ? 1 : -1);
-      if ((range > 0 && current >= end) || (range < 0 && current <= end)) {
-        element.innerText = end + suffix;
-        clearInterval(timer);
+const startCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount, 10);
       } else {
-        element.innerText = current + suffix;
+        counter.innerText = target.toLocaleString() + (target > 1000 ? "+" : "");
       }
-    }, stepTime);
+    };
+    updateCount();
+  });
+};
+
+// تفعيل الحركة بمجرد وصول المستخدم للقسم
+const observer = new IntersectionObserver((entries) => {
+  if(entries[0].isIntersecting) {
+    startCounters();
+    observer.disconnect(); // التفعيل لمرة واحدة فقط
   }
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+}, { threshold: 0.5 });
 
-    // 1. استخراج البيانات من الحقول
-    const name = document.getElementById('fullName').value.trim();
-    const phone = document.getElementById('phoneContact').value.trim();
-    const email = document.querySelector('input[placeholder="البريد الإلكتروني"]').value.trim();
-    const service = document.getElementById('serviceType').value;
-    const message = document.getElementById('messageText').value.trim();
-    const statusDiv = document.getElementById('formStatus');
-
-    // 2. رقم الواتساب المستهدف (بدون علامة +)
-    const whatsappNumber = "966531906627";
-
-    // 3. تنسيق نص الرسالة (استخدام %0A للسطر الجديد)
-    let fullMessage = `*طلب جديد من الموقع الشخصي* 🏆%0A%0A`;
-    fullMessage += `*الاسم:* ${name}%0A`;
-    fullMessage += `*الجوال:* ${phone}%0A`;
-    if(email) fullMessage += `*البريد:* ${email}%0A`;
-    fullMessage += `*نوع الخدمة:* ${service}%0A`;
-    if(message) fullMessage += `*التفاصيل:* ${message}`;
-
-    // 4. إظهار حالة الإرسال للمستخدم
-    statusDiv.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> جاري فتح واتساب...';
-    statusDiv.style.color = "#d4af37";
-
-    // 5. فتح الرابط بعد تأخير بسيط لإعطاء تجربة مستخدم أفضل
-    setTimeout(() => {
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
-        window.open(whatsappUrl, '_blank');
-        
-        statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> تم التحويل للواتساب بنجاح!';
-        statusDiv.style.color = "#a5d6a5";
-        
-        // إعادة تعيين النموذج
-        document.getElementById('contactForm').reset();
-    }, 800);
-});
-
-  const counterClients = document.getElementById('counterClients');
-  const counterRevenue = document.getElementById('counterRevenue');
-  const counterAwards = document.getElementById('counterAwards');
-  const counterYears = document.getElementById('counterYears');
-  let counted = false;
-  const counterSection = document.querySelector('.counter-premium');
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && !counted) {
-      counted = true;
-      animateNumber(counterClients, 0, 324, 1800, '+');
-      animateNumber(counterRevenue, 0, 35, 2000, '%');
-      animateNumber(counterAwards, 0, 5, 1500, '');
-      animateNumber(counterYears, 0, 12, 1500, '+');
-    }
-  }, { threshold: 0.4 });
-  if (counterSection) observer.observe(counterSection);
-
-  // Smooth Navigation
-  document.querySelectorAll('.nav-links a, #contactNavBtn, #heroContactBtn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      let targetId = '#home';
-      if (this.getAttribute('href') && this.getAttribute('href') !== '#') targetId = this.getAttribute('href');
-      if (this.id === 'contactNavBtn' || this.id === 'heroContactBtn') targetId = '#contact';
-      const target = document.querySelector(targetId);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Active nav on scroll
-  window.addEventListener('scroll', () => {
-    let sections = document.querySelectorAll('section');
-    let scrollPos = window.scrollY + 150;
-    sections.forEach(section => {
-      if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-        let id = section.getAttribute('id');
-        document.querySelectorAll('.nav-links a').forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
-        });
-      }
-    });
-  });
-console.log("%c🚀 Developed by: Eng. Majid Qasim Bin Amr", "color: #d4af37; font-size: 16px; font-weight: bold;");
-console.log("%cContact: +967 776 503 890", "color: #fff; font-size: 12px;");
-
-  // Contact Form Handler
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('fullName').value.trim();
-    const phone = document.getElementById('phoneContact').value.trim();
-    if (!name || !phone) {
-      formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> الرجاء إدخال الاسم ورقم الجوال';
-      formStatus.style.color = "#d4af37";
-      setTimeout(() => formStatus.innerHTML = '', 3000);
-      return;
-    }
-    formStatus.innerHTML = '<i class="fas fa-check-circle"></i> تم استلام طلبك بنجاح! سيتواصل معك عامر باقطيان خلال 24 ساعة.';
-    formStatus.style.color = "#a5d6a5";
-    contactForm.reset();
-    setTimeout(() => formStatus.innerHTML = '', 5000);
-  });
-
-  console.log("%c🏆 عامر باقطيان | مندوب مبيعات متميز - الرياض 🏆", "color: #d4af37; font-size: 14px; font-weight: bold;");
-  console.log("%cخبرة عملية 12+ سنة | 5 جوائز من شركة المستقبل | +185 مليون ريال مبيعات", "color: #d4af37;");
+observer.observe(document.querySelector('.achievements'));
 </script>
+
 </body>
-  </html>
+</html>
