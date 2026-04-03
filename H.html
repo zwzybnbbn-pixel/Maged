@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAJED | The Software Titan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syne:wght@400;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --accent: #00ffcc;
+            --accent-soft: rgba(0, 255, 204, 0.1);
+            --gold: #ffcc00;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #ffffff;
+            --text-dim: #a1a1a1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+        /* General Section Styling */
+        section { padding: 120px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+        .section-num { color: var(--accent); font-family: monospace; font-size: 1.2rem; margin-bottom: 10px; display: block; }
+        h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 50px; text-transform: uppercase; }
+
+        /* 1. HERO SECTION */
+        .hero { text-align: center; position: relative; background: radial-gradient(circle at center, #111 0%, #030303 100%); }
+        .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 12vw, 8rem); line-height: 0.8; margin: 20px 0; background: linear-gradient(to bottom, #fff, #444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .badge { background: var(--accent-soft); color: var(--accent); padding: 5px 15px; border-radius: 50px; border: 1px solid var(--accent); font-size: 0.9rem; letter-spacing: 2px; }
+
+        /* 2. ABOUT SECTION */
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .stat-card { background: var(--glass); padding: 20px; border-radius: 15px; border: 1px solid var(--border); }
+        .stat-card span { display: block; font-size: 2rem; font-weight: bold; color: var(--accent); }
+
+        /* 3. TECH ARSENAL (THE LANGUAGES) */
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .tech-item { background: var(--glass); padding: 30px 20px; border-radius: 20px; text-align: center; border: 1px solid var(--border); transition: 0.4s; }
+        .tech-item:hover { border-color: var(--accent); transform: translateY(-10px); background: var(--accent-soft); }
+        .tech-item i { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .tech-item span { font-weight: bold; font-size: 0.9rem; }
+
+        /* 4. EXPERIENCE TIMELINE */
+        .timeline { position: relative; max-width: 800px; }
+        .time-item { margin-bottom: 50px; padding-left: 30px; border-left: 2px solid var(--accent); position: relative; }
+        .time-item::after { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 15px var(--accent); }
+
+        /* 5. STRATEGIC PROJECTS */
+        .project-card { display: flex; background: var(--glass); border-radius: 30px; overflow: hidden; margin-bottom: 40px; border: 1px solid var(--border); }
+        .project-info { padding: 40px; flex: 1; }
+        .project-img { width: 40%; background: #111; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: #222; }
+
+        /* 6. SERVICES */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; transition: 0.3s; }
+        .service-card:hover { background: white; color: black; }
+
+        /* 7. CYBERSECURITY SECTION */
+        .cyber-box { background: #0a0a0a; border: 1px dashed #333; padding: 40px; border-radius: 20px; position: relative; }
+        .glitch-text { color: #00ff00; font-family: monospace; }
+
+        /* 8. CONTACT SECTION */
+        .contact-final { text-align: center; }
+        .email-link { font-size: clamp(1.5rem, 4vw, 3rem); color: var(--accent); text-decoration: none; font-weight: 800; border-bottom: 3px solid var(--accent); }
+
+        @media (max-width: 768px) { .about-content, .project-card { flex-direction: column; grid-template-columns: 1fr; } .project-img { width: 100%; height: 200px; } }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <span class="badge">AVAILABLE FOR GLOBAL PROJECTS</span>
+        <h1>MAJED<br>QASEM</h1>
+        <p class="hero-desc">Formidable Full-Stack Engineer & Software Architect.</p>
+        <div style="margin-top: 40px;">
+            <a href="#contact" style="color: white; text-decoration: none; border: 1px solid white; padding: 15px 40px; border-radius: 50px;">EXPLORE MY WORLD</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <span class="section-num">01 //</span>
+        <h2>The Architect</h2>
+        <div class="about-content">
+            <div>
+                <p style="font-size: 1.5rem;">I don't just write code; I engineer digital ecosystems that are scalable, secure, and visually stunning.</p>
+                <p style="color: var(--text-dim); margin-top: 20px;">Based in Yemen, working globally. Specializing in high-performance backends and luxurious frontends. Graduating from Shabwah University with a focus on Computer Science.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-card"><span>100+</span> Reps Workout/Day</div>
+                <div class="stat-card"><span>30+</span> High-End Projects</div>
+                <div class="stat-card"><span>99%</span> Code Efficiency</div>
+                <div class="stat-card"><span>24/7</span> AI-Assisted Vibe</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech">
+        <span class="section-num">02 //</span>
+        <h2>Technical Arsenal</h2>
+        <div class="tech-grid">
+            <div class="tech-item"><i class="fab fa-rust" style="color: #dea584;"></i><span>RUST</span></div>
+            <div class="tech-item"><i class="fas fa-code" style="color: #659ad2;"></i><span>C++ (20/23)</span></div>
+            <div class="tech-item"><i class="fab fa-windows" style="color: #512bd4;"></i><span>C# .NET 10</span></div>
+            <div class="tech-item"><i class="fas fa-bolt" style="color: #a90533;"></i><span>ELIXIR</span></div>
+            <div class="tech-item"><i class="fab fa-google" style="color: #4285F4;"></i><span>GO (GOLANG)</span></div>
+            <div class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i><span>JAVASCRIPT</span></div>
+            <div class="tech-item"><i class="fab fa-python" style="color: #3776ab;"></i><span>PYTHON</span></div>
+            <div class="tech-item"><i class="fas fa-database" style="color: #336791;"></i><span>POSTGRESQL</span></div>
+            <div class="tech-item"><i class="fas fa-mobile-alt" style="color: #02569b;"></i><span>FLUTTER</span></div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <span class="section-num">03 //</span>
+        <h2>The Journey</h2>
+        <div class="timeline">
+            <div class="time-item">
+                <h3>Senior Full-Stack Architect</h3>
+                <p style="color: var(--accent);">Freelance | 2024 - Present</p>
+                <p>Architecting enterprise solutions for retail and logistics with unmatched performance metrics.</p>
+            </div>
+            <div class="time-item">
+                <h3>Software Engineering Student</h3>
+                <p style="color: var(--accent);">Shabwah University | 2023 - 2027</p>
+                <p>Leading technical projects and perfecting the craft of Computer Science.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <span class="section-num">04 //</span>
+        <h2>Strategic Projects</h2>
+        <div class="project-card">
+            <div class="project-info">
+                <span style="color: var(--gold);">ECOSYSTEM</span>
+                <h3>TOWSILO DELIVERY</h3>
+                <p>A massive delivery infrastructure connecting thousands of drivers with real-time routing logic.</p>
+            </div>
+            <div class="project-img"><i class="fas fa-truck-fast"></i></div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <span style="color: var(--gold);">RETAIL GENIUS</span>
+                <h3>AL-MAJD POS</h3>
+                <p>An elite Point of Sale system for supermarkets and pharmacies, built with .NET 10 and SQL.</p>
+            </div>
+            <div class="project-img"><i class="fas fa-cash-register"></i></div>
+        </div>
+    </section>
+
+    <section id="services">
+        <span class="section-num">05 //</span>
+        <h2>Core Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Custom Software</h3>
+                <p>High-performance desktop and web applications tailored for specific business logic.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mobile Apps</h3>
+                <p>Cross-platform Flutter apps with luxurious UI and smooth animations.</p>
+            </div>
+            <div class="service-card">
+                <h3>System Architecture</h3>
+                <p>Consulting on database design, server scaling, and secure API structures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cyber">
+        <span class="section-num">06 //</span>
+        <h2>Cyber Defense</h2>
+        <div class="cyber-box">
+            <h3 class="glitch-text">> [SECURITY_PROTOCOL_ACTIVE]</h3>
+            <p style="margin-top: 20px;">Specialized in Penetration Testing and Bug Bounty hunting. My philosophy: "Build it like you're going to hack it."</p>
+            <ul style="margin-top: 20px; color: var(--text-dim); list-style: inside square;">
+                <li>Network Vulnerability Assessment</li>
+                <li>Secure Code Auditing</li>
+                <li>API Security Hardening</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-final">
+        <span class="section-num">07 //</span>
+        <h2>Initiate Contact</h2>
+        <p style="margin-bottom: 40px; color: var(--text-dim);">Ready to build something that disrupts the market?</p>
+        <a href="mailto:magedgasem55558@gmail.com" class="email-link">magedgasem55558@gmail.com</a>
+        <div style="margin-top: 60px;">
+            <p>YEMEN | REMOTE WORLDWIDE</p>
+            <p style="color: var(--accent); margin-top: 10px;">&copy; 2026 THE TITAN PORTFOLIO</p>
+        </div>
+    </section>
+
+</body>
+</html>
